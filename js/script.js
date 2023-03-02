@@ -1,33 +1,20 @@
-"use strict";
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-console.log('arr' + " - object");
-console.log(4 + "5");
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
+const a = prompt('Один из последних просмотренных фильмов?', ''),
+    b = prompt('На сколько оцените его?', ''),
+    c = prompt('Один из последних просмотренных фильмов?', ''),
+    d = prompt('На сколько оцените его?', '');
 
-let incr = 10,
-    decr = 10;
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
-/* ++incr; //увеличение значения на 1
---decr; //уменьшение значения на 1 */
-
-console.log(++incr);
-console.log(--decr);
-
-
-console.log(5 % 2); //% возвращает остаток от деления двух чисел
-
-console.log(2 + 2 * 2 === 8); //==, сравнение, === строгое равенство
-
-//&& оператор сравнения 'и' / если оба оператора правдивы то будет истина(true)
-//|| оператор сравнения 'или' / если хотябы один оператор true то все выражение будет true(истина)
-
-const isChecked = false,
-    isClose = false;
-
-console.log(isChecked || !isClose);
-
-// ! оператор отрицания
-// != оператор не равенства
-
-
+console.log(personalMovieDB);
 
